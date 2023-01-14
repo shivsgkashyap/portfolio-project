@@ -22,16 +22,16 @@ const Hero = (props: Props) => {
       <h1 className="relative text-7xl lg:text-8xl mx-auto tracking-wider uppercase text-[#F7AB0A]">
         Shiv Kashyap
       </h1>
-      <div className="mt-6">
-        <h3 className="text-sm uppercase text-gray-500 pb-4 tracking-[15px]">
+      <div className="z-20">
+        <h3 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]">
           Software Engineer
         </h3>
-        <h2 className="text-5xl lg:text-6xl font-semibold px-10">
+        <h2 className="text-5xl lg:text-6xl font-semibold p-10">
           <span className="mr-3">{text}</span>
           <Cursor cursorColor="#F7AB0A" />
         </h2>
 
-        <div className="pt-5">
+        <nav className="pt-5">
           <Link href="#about">
             <button className="heroButton">About</button>
           </Link>
@@ -44,7 +44,7 @@ const Hero = (props: Props) => {
           <Link href="#projects">
             <button className="heroButton">Projects</button>
           </Link>
-        </div>
+        </nav>
       </div>
     </div>
   );
