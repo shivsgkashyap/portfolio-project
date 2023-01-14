@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 type Props = {};
 
@@ -13,8 +14,24 @@ const Projects = (props: Props) => {
 
       <div className="relative w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20">
         {projects.map((project) => (
-          <div className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen">
-            <img
+          <motion.div
+            initial={{
+              opacity: 0,
+            }}
+            whileInView={{
+              opacity: 1,
+            }}
+            transition={{ duration: 1.5 }}
+            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen"
+          >
+            <motion.img
+              initial={{
+                y: -300,
+                opacity: 0,
+              }}
+              transition={{ duration: 1.2 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              viewport={{ once: true }}
               src="https://img.freepik.com/premium-vector/laptop-tablet-smartphone-smart-watch_389832-544.jpg?w=2000"
               alt=""
             />
@@ -23,8 +40,15 @@ const Projects = (props: Props) => {
               <h4 className="text-4xl font-semibold text-center underline decoration-[#F7AB0A]/50">
                 Project 1
               </h4>
+
+              <p className="text-lg text-center md:text-left">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Ducimus, ipsa quis velit, praesentium provident ad libero vero
+                amet inventore, odit sapiente recusandae quidem fuga illo
+                consequuntur assumenda pariatur? Laudantium, doloremque!
+              </p>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
 
