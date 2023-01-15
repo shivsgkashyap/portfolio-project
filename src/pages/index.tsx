@@ -7,6 +7,19 @@ import Projects from "@/components/Projects";
 import ContactMe from "@/components/ContactMe";
 import Link from "next/link";
 import { ArrowUpCircleIcon } from "@heroicons/react/24/solid";
+import { GetStaticProps } from "next";
+import { PageInfo, Project, Skill, Social } from "typings";
+import { fetchProjects } from "utils/fetchProjects";
+import { fetchSocial } from "utils/fetchSocials";
+import { fetchSkills } from "utils/fetchSkills";
+import { fetchPageInfo } from "utils/fetchPageInfo";
+
+type Props = {
+  pageInfo: PageInfo;
+  skills: Skill[];
+  projects: Project[];
+  socials: Social[];
+};
 
 export default function Home() {
   return (
@@ -49,3 +62,10 @@ export default function Home() {
     </div>
   );
 }
+
+export const getStaticProps: GetStaticProps<Props> = async () => {
+  const pageInfo: PageInfo = await fetchPageInfo();
+  const skills: Skill[] = await fetchSkills();
+  const projects: Project[] = await fetchProjects();
+  const socials: Social[] = await fetchSocial();
+};
