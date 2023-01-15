@@ -8,13 +8,13 @@ const query = groq`
 `;
 
 type Data = {
-  socials: Skill[];
+  skills: Skill[];
 };
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  const socials: Skill[] = await sanityClient.fetch(query);
-  res.status(200).json({ socials });
+  const skills: Skill[] = await sanityClient.fetch(query);
+  res.status(200).json({ skills });
 }
