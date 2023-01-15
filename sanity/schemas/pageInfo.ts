@@ -16,12 +16,9 @@ export default defineType({
       type: 'string',
     }),
     defineField({
-      name: 'heroImage',
-      title: 'Image',
-      type: 'image',
-      options: {
-        hotspot: true,
-      },
+      name: 'fullName',
+      title: 'FullName',
+      type: 'string',
     }),
     defineField({
       name: 'backgroundInformation',
