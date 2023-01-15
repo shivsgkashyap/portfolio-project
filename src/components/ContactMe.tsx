@@ -5,18 +5,18 @@ import { useForm, SubmitHandler } from "react-hook-form";
 type Props = {};
 
 type Inputs = {
-  example: string;
-  exampleRequired: string;
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
 };
 
 const ContactMe = (props: Props) => {
-  const {
-    register,
-    handleSubmit,
-    watch,
-    formState: { errors },
-  } = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+  const { register, handleSubmit } = useForm<Inputs>();
+
+  const onSubmit: SubmitHandler<Inputs> = (formData) => {
+    window.location.href = `mailto:ssgkashyap@outlook.com?subject=${formData.subject}&body=${formData.message} %0D%0A%0D%0ASincerely,%0D%0A${formData.name}`;
+  };
 
   return (
     <div className="h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
@@ -45,15 +45,41 @@ const ContactMe = (props: Props) => {
           </div>
         </div>
 
-        <form className="flex flex-col space-y-2 w-fit mx-auto">
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="flex flex-col space-y-2 w-fit mx-auto"
+        >
           <div className="flex space-x-2">
-            <input placeholder="Name" className="contactInput" type="text" />
-            <input placeholder="Email" className="contactInput" type="email" />
+            <input
+              {...register("name")}
+              placeholder="Full Name"
+              className="contactInput"
+              type="text"
+              required
+            />
+            <input
+              {...register("email")}
+              placeholder="Email"
+              className="contactInput"
+              type="email"
+              required
+            />
           </div>
 
-          <input placeholder="Subject" className="contactInput" type="text" />
+          <input
+            {...register("subject")}
+            placeholder="Subject"
+            className="contactInput"
+            type="text"
+            required
+          />
 
-          <textarea placeholder="Message" className="contactInput"></textarea>
+          <textarea
+            {...register("message")}
+            placeholder="Message"
+            className="contactInput"
+            required
+          ></textarea>
 
           <button
             type="submit"
