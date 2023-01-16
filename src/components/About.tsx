@@ -17,7 +17,7 @@ const About = ({ pageInfo }: Props) => {
         opacity: 1,
       }}
       transition={{ duration: 1.5 }}
-      className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center"
+      className="flex flex-col relative h-screen text-center max-w-7xl px-10 justify-evenly mx-auto items-center md:text-left md:justify-center md:gap-20"
     >
       <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
         About
@@ -37,7 +37,7 @@ const About = ({ pageInfo }: Props) => {
         }}
         viewport={{ once: true }}
         src={urlFor(pageInfo?.profilePic).url()}
-        className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px]"
+        className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-[412px] md:h-[234px] lg:w-[825px] lg:h-[469px]"
       />
 
       <div className="space-y-10 px-0 md:px-10">
