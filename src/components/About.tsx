@@ -1,9 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { PageInfo } from "typings";
+import { urlFor } from "sanity";
 
-type Props = {};
+type Props = {
+  pageInfo: PageInfo;
+};
 
-const About = (props: Props) => {
+const About = ({ pageInfo }: Props) => {
   return (
     <motion.div
       initial={{
@@ -32,7 +36,7 @@ const About = (props: Props) => {
           opacity: 1,
         }}
         viewport={{ once: true }}
-        src="https://monstar-lab.com/global/wp-content/uploads/sites/11/2019/04/male-placeholder-image.jpeg"
+        src={urlFor(pageInfo?.profilePic).url()}
         className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-95 xl:w-[500px] xl:h-[600px]"
       />
 
@@ -42,18 +46,7 @@ const About = (props: Props) => {
           <span className="underline decoration-[#F7AB0A]/50">little</span>{" "}
           background
         </h4>
-        <p className="text-base">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque tenetur
-          doloribus porro temporibus soluta, ad ut dolore, sint atque hic a illo
-          corrupti laborum esse praesentium aut provident eum placeat! Lorem
-          ipsum dolor sit amet consectetur, adipisicing elit. Iusto, temporibus
-          quasi minus voluptates officia, tempora odio doloremque molestias
-          accusamus et amet illo perferendis maxime quia beatae quidem!
-          Voluptates, eius sit? Lorem ipsum, dolor sit amet consectetur
-          adipisicing elit. Aut dolorem numquam fuga sit sequi esse ipsam error
-          natus minus, totam praesentium aperiam inventore vitae est amet illum
-          optio quis harum!
-        </p>
+        <p className="text-base">{pageInfo?.backgroundInformation}</p>
       </div>
     </motion.div>
   );
