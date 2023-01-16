@@ -44,11 +44,6 @@ export default defineType({
       type: 'string',
     }),
     defineField({
-      name: 'address',
-      title: 'Address',
-      type: 'string',
-    }),
-    defineField({
       name: 'socials',
       title: 'Socials',
       type: 'array',

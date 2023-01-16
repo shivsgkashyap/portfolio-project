@@ -58,6 +58,33 @@ const Projects = ({ projects }: Props) => {
               <p className="text-lg text-center md:text-left">
                 {project?.summary}
               </p>
+
+              <div className="flex flex-col justify-center items-center gap-2 md:flex-row md:gap-10">
+                <button
+                  onClick={() =>
+                    window.open(
+                      project?.linkToBuild,
+                      "_blank",
+                      "noopener noreferrer"
+                    )
+                  }
+                  className="mt-6 px-6 py-2 border rounded-full uppercase text-sm tracking-widest text-gray-400 transition-all hover:border-[#F7AB0A]/60 hover:text-[#F7AB0A]/60"
+                >
+                  Live Preview
+                </button>
+                <button
+                  onClick={() =>
+                    window.open(
+                      project?.linkToGitHub,
+                      "_blank",
+                      "noopener noreferrer"
+                    )
+                  }
+                  className="mt-6 px-6 py-2 border rounded-full uppercase text-sm tracking-widest text-gray-400 transition-all hover:border-[#F7AB0A]/60 hover:text-[#F7AB0A]/60"
+                >
+                  GitHub Repo
+                </button>
+              </div>
             </div>
           </motion.div>
         ))}
