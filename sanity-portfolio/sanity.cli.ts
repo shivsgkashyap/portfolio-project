@@ -1,4 +1,4 @@
-import {defineCliConfig} from '@sanity/cli/lib/dts/src/index'
+import {defineCliConfig} from 'sanity/cli'
 
 export default defineCliConfig({
   api: {
