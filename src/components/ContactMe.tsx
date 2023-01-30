@@ -24,8 +24,8 @@ const ContactMe = (props: Props) => {
         Contact
       </h3>
 
-      <div className="flex flex-col space-y-10">
-        <h4 className="text-4xl font-semibold text-center">
+      <div className="mt-16 flex flex-col space-y-10 md:mt-0">
+        <h4 className="md:text-4xl text-xl font-semibold text-center">
           I have got just what you need.{" "}
           <span className="underline decoration-[#F7AB0A]/50">Let's talk.</span>
         </h4>
@@ -33,34 +33,42 @@ const ContactMe = (props: Props) => {
         <div className="space-y-10">
           <div className="flex items-center space-x-5 justify-center">
             <PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="text-2xl">+44 7772 451177</p>
+            <p className="text-xl md:text-2xl">+44 7772 451177</p>
           </div>
           <div className="flex items-center space-x-5 justify-center">
             <EnvelopeIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p className="text-2xl">ssgkashyap@outlook.com</p>
+            <p className="text-xl md:text-2xl">ssgkashyap@outlook.com</p>
           </div>
         </div>
 
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="flex flex-col space-y-2 w-fit mx-auto"
+          className="flex flex-col space-y-2 w-2/3 md:w-fit mx-auto"
         >
-          <div className="flex space-x-2">
+          <div className="md:flex md:space-x-2">
             <input
               {...register("name")}
               placeholder="Full Name"
-              className="contactInput"
+              className="contactInput w-full"
               type="text"
               required
             />
             <input
               {...register("email")}
               placeholder="Email"
-              className="contactInput"
+              className="contactInput hidden md:block"
               type="email"
               required
             />
           </div>
+
+          <input
+            {...register("email")}
+            placeholder="Email"
+            className="contactInput md:hidden"
+            type="email"
+            required
+          />
 
           <input
             {...register("subject")}
