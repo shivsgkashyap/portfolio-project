@@ -1,4 +1,4 @@
-import {defineField, defineType} from 'sanity/lib/exports/index'
+import {defineField, defineType} from 'sanity'
 
 export default defineType({
   name: 'skill',

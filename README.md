@@ -1,6 +1,6 @@
 # Personal Portfolio
 
-# [LIVE DEMO](https://silly-hen-tux.cyclic.app/) :point_left:
+# [LIVE DEMO](https://shivkashyap.com/) :point_left:
 
 ## Project Specifications
 

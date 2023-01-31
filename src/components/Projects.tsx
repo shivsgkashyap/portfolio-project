@@ -14,8 +14,8 @@ type Props = {
 
 const Projects = ({ projects }: Props) => {
   return (
-    <div className="h-screen relative flex overflow-hidden flex-col text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0">
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+    <div className="h-screen relative flex overflow-hidden flex-col text-left max-w-full justify-center mx-auto items-center z-0">
+      <h3 className="mt-20 uppercase tracking-[20px] text-gray-500 text-2xl">
         Projects
       </h3>
 
@@ -29,7 +29,7 @@ const Projects = ({ projects }: Props) => {
               opacity: 1,
             }}
             transition={{ duration: 1.5 }}
-            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center pt-5 md:p-44 h-screen"
+            className="w-screen h-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-evenly md:justify-start pt-5 md:p-28"
             key={project._id}
           >
             <motion.img
@@ -42,7 +42,7 @@ const Projects = ({ projects }: Props) => {
               viewport={{ once: true }}
               src={urlFor(project?.image).url()}
               alt="Screenshot of project"
-              className="min-h-1/2 w-full md:max-w-6xl md:mt-8 object-contain"
+              className="min-h-1/2 w-full md:max-w-4xl md:mt-8 object-contain"
             />
 
             <div className="space-y-5 md:space-y-10 px-0 md:px-10 max-w-6xl">
