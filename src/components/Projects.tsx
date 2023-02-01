@@ -15,7 +15,7 @@ type Props = {
 const Projects = ({ projects }: Props) => {
   return (
     <div className="h-screen relative flex overflow-hidden flex-col text-left max-w-full justify-center mx-auto items-center z-0">
-      <h3 className="mt-20 -mb-24 lg:-mb-28 2xl:-mb-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+      <h3 className="mt-20 -mb-24 lg:-mb-28 2xl:-mb-24 uppercase tracking-[20px] text-gray-500 text-2xl lg:mt-10 2xl:mt-20">
         Projects
       </h3>
 
@@ -29,7 +29,7 @@ const Projects = ({ projects }: Props) => {
               opacity: 1,
             }}
             transition={{ duration: 1.5 }}
-            className="w-screen h-screen flex-shrink-0 snap-center flex flex-col space-y-5 md:space-y-10 items-center justify-center md:justify-start pt-5 md:p-28"
+            className="w-screen h-screen flex-shrink-0 snap-center flex flex-col space-y-5 md:space-y-10 items-center justify-center md:justify-start pt-5 md:mt-20"
             key={project._id}
           >
             <motion.img

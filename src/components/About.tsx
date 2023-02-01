@@ -17,7 +17,7 @@ const About = ({ pageInfo }: Props) => {
         opacity: 1,
       }}
       transition={{ duration: 1.5 }}
-      className="flex flex-col relative m-h-screen text-center max-w-7xl px-10 mx-auto items-center md:text-left justify-center md:gap-10 2xl:gap-20"
+      className="flex flex-col relative h-screen text-center max-w-7xl px-10 mx-auto items-center md:text-left justify-center md:gap-10 2xl:gap-20"
     >
       <h3 className="uppercase tracking-[20px] text-gray-500 text-2xl lg:-mb-5">
         About
@@ -46,13 +46,13 @@ const About = ({ pageInfo }: Props) => {
           <span className="underline decoration-[#F7AB0A]/50">little</span>{" "}
           background:
         </h4>
-        <p className="text-xs md:text-base 2xl:text-lg">
+        <p className="text-xs md:text-base lg:text-sm 2xl:text-lg">
           {pageInfo?.backgroundInformation}
         </p>
-        <p className="hidden text-xs md:block md:text-base 2xl:text-lg">
+        <p className="hidden text-xs md:block md:text-base lg:text-sm 2xl:text-lg">
           {pageInfo?.backgroundInformation2}
         </p>
-        <p className="text-xs md:text-base 2xl:text-lg">
+        <p className="text-xs md:text-base lg:text-sm 2xl:text-lg">
           {pageInfo?.backgroundInformation3}
         </p>
       </div>
@@ -61,7 +61,7 @@ const About = ({ pageInfo }: Props) => {
         href="https://www.github.com/shivsgkashyap"
         target="_blank"
         rel=" noopener noreferrer"
-        className="mt-6 px-6 py-2 border rounded-full uppercase text-sm tracking-widest text-gray-400 transition-all hover:border-[#F7AB0A]/60 hover:text-[#F7AB0A]/60 md:mt-0 2xl:-mt-14"
+        className="mt-6 px-6 py-2 border rounded-full uppercase text-sm tracking-widest text-gray-400 transition-all hover:border-[#F7AB0A]/60 hover:text-[#F7AB0A]/60 md:mt-0 lg:mb-12 2xl:mb-0 2xl:-mt-14"
       >
         Github Repositories
       </a>

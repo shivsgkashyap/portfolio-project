@@ -20,11 +20,11 @@ const ContactMe = (props: Props) => {
 
   return (
     <div className="h-screen flex relative flex-col text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl lg:top-14 2xl:top-24">
         Contact
       </h3>
 
-      <div className="mt-16 flex flex-col space-y-10 md:mt-0">
+      <div className="mt-16 flex flex-col space-y-10 md:mt-10 2xl:mt-0">
         <h4 className="md:text-4xl text-xl font-semibold text-center">
           I have got just what you need.{" "}
           <span className="underline decoration-[#F7AB0A]/50">

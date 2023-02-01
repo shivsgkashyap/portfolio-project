@@ -39,7 +39,7 @@ const Skills = ({ skills }: Props) => {
       transition={{ duration: 1.5 }}
       className="flex relative flex-col h-screen text-center md:text-left max-w-[2000px] xl:px-10 items-center mx-auto"
     >
-      <h3 className="uppercase tracking-[20px] mt-20 mb-5 text-gray-500 text-2xl">
+      <h3 className="uppercase tracking-[20px] mt-20 mb-5 text-gray-500 text-2xl lg:mt-10 2xl:mt-20">
         Skills
       </h3>
       <h3 className="w-3/4 uppercase tracking-[3px] text-xs text-gray-500 md:text-sm md:w-auto md:-mb-20">
@@ -47,7 +47,7 @@ const Skills = ({ skills }: Props) => {
         technology
       </h3>
       {isDesktop ? (
-        <div className="grid grid-cols-3 mt-6 md:mt-32 md:grid-cols-4 gap-5">
+        <div className="grid grid-cols-3 mt-6 md:mt-32 md:grid-cols-4 gap-5 2xl:my-auto">
           {skills?.slice(0, skills.length / 2).map((skill) => (
             <Skill key={skill._id} skill={skill} direction={-200} />
           ))}
