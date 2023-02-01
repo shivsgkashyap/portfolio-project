@@ -15,7 +15,7 @@ type Props = {
 const Projects = ({ projects }: Props) => {
   return (
     <div className="h-screen relative flex overflow-hidden flex-col text-left max-w-full justify-center mx-auto items-center z-0">
-      <h3 className="mt-20 -mb-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+      <h3 className="mt-20 -mb-24 lg:-mb-28 2xl:-mb-24 uppercase tracking-[20px] text-gray-500 text-2xl">
         Projects
       </h3>
 
@@ -29,7 +29,7 @@ const Projects = ({ projects }: Props) => {
               opacity: 1,
             }}
             transition={{ duration: 1.5 }}
-            className="w-screen h-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center md:justify-start pt-5 md:p-28"
+            className="w-screen h-screen flex-shrink-0 snap-center flex flex-col space-y-5 md:space-y-10 items-center justify-center md:justify-start pt-5 md:p-28"
             key={project._id}
           >
             <motion.img
@@ -42,11 +42,11 @@ const Projects = ({ projects }: Props) => {
               viewport={{ once: true }}
               src={urlFor(project?.image).url()}
               alt="Screenshot of project"
-              className="min-h-1/2 w-full md:max-w-3xl md:mt-8 object-contain"
+              className="min-h-1/2 w-full md:max-w-3xl lg:max-w-md 2xl:max-w-3xl md:mt-8 object-contain"
             />
 
-            <div className="space-y-5 md:space-y-10 px-0 md:px-10 max-w-6xl">
-              <h4 className="lg:text-4xl md:text-2xl text-xl font-semibold text-center underline decoration-[#F7AB0A]/50">
+            <div className="space-y-5 md:space-y-10 lg:space-y-5 px-0 md:px-10 max-w-6xl">
+              <h4 className="2xl:text-4xl md:text-2xl text-xl font-semibold text-center underline decoration-[#F7AB0A]/50">
                 {project?.title}
               </h4>
 
@@ -61,7 +61,7 @@ const Projects = ({ projects }: Props) => {
                 ))}
               </div>
 
-              <p className="hidden w-3/4 text-xs m-auto text-center lg:text-left md:text-sm lg:text-lg lg:block">
+              <p className="hidden w-3/4 text-xs m-auto text-center 2xl:text-left md:text-sm 2xl:text-lg 2xl:block">
                 {project?.summary}
               </p>
 

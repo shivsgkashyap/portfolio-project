@@ -42,7 +42,7 @@ const Skills = ({ skills }: Props) => {
       <h3 className="uppercase tracking-[20px] mt-20 mb-5 text-gray-500 text-2xl">
         Skills
       </h3>
-      <h3 className="w-3/4 uppercase tracking-[3px] text-xs text-gray-500 md:text-sm md:w-auto">
+      <h3 className="w-3/4 uppercase tracking-[3px] text-xs text-gray-500 md:text-sm md:w-auto md:-mb-20">
         {isDesktop ? "Hover Over" : "Press"} a skill for the name of the
         technology
       </h3>

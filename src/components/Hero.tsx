@@ -22,14 +22,14 @@ const Hero = ({ pageInfo }: Props) => {
   return (
     <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
       <BackgroundCircles />
-      <h1 className="relative text-7xl font-semibold lg:text-8xl mx-auto tracking-wider uppercase text-[#F7AB0A]">
+      <h1 className="relative text-7xl font-semibold 2xl:text-8xl mx-auto tracking-wider uppercase text-[#F7AB0A]">
         {pageInfo?.fullName}
       </h1>
       <div className="z-20">
         <h3 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]">
           {pageInfo?.role}
         </h3>
-        <h2 className="text-2xl md:text-4xl lg:text-6xl font-semibold p-10">
+        <h2 className="text-2xl md:text-4xl 2xl:text-6xl font-semibold p-10">
           <span className="mr-3">{text}</span>
           <Cursor cursorColor="#F7AB0A" />
         </h2>
