@@ -37,9 +37,9 @@ const Skills = ({ skills }: Props) => {
         opacity: 1,
       }}
       transition={{ duration: 1.5 }}
-      className="flex relative flex-col h-screen text-center md:text-left max-w-[2000px] xl:px-10 justify-center items-center mx-auto"
+      className="flex relative flex-col h-screen text-center md:text-left max-w-[2000px] xl:px-10 items-center mx-auto"
     >
-      <h3 className="uppercase tracking-[20px] mb-5 text-gray-500 text-2xl">
+      <h3 className="uppercase tracking-[20px] mt-20 mb-5 text-gray-500 text-2xl">
         Skills
       </h3>
       <h3 className="w-3/4 uppercase tracking-[3px] text-xs text-gray-500 md:text-sm md:w-auto">
