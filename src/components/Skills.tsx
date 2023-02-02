@@ -47,7 +47,7 @@ const Skills = ({ skills }: Props) => {
         technology
       </h3>
       {isDesktop ? (
-        <div className="grid grid-cols-3 mt-6 md:mt-32 md:grid-cols-4 gap-5 2xl:my-auto">
+        <div className="grid grid-cols-3 mt-6 md:grid-cols-4 gap-5 md:my-auto">
           {skills?.slice(0, skills.length / 2).map((skill) => (
             <Skill key={skill._id} skill={skill} direction={-200} />
           ))}
@@ -56,7 +56,7 @@ const Skills = ({ skills }: Props) => {
           ))}
         </div>
       ) : (
-        <div className="grid grid-cols-3 mt-6 md:mt-32 md:grid-cols-4 gap-5">
+        <div className="grid grid-cols-3 mt-6 md:grid-cols-4 gap-5 md:my-auto">
           {skills?.map((skill) => (
             <Skill key={skill._id} skill={skill} />
           ))}
