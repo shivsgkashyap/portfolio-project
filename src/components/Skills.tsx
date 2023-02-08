@@ -39,7 +39,7 @@ const Skills = ({ skills }: Props) => {
       transition={{ duration: 1.5 }}
       className="flex relative flex-col h-screen text-center md:text-left max-w-[2000px] xl:px-10 items-center mx-auto"
     >
-      <h3 className="uppercase tracking-[20px] mt-16 mb-2 md:mt-20 md:mb-5 text-gray-500 text-2xl lg:mt-10 2xl:mt-20">
+      <h3 className="pl-5 uppercase tracking-[20px] mt-16 mb-2 md:mt-20 md:mb-5 text-gray-500 text-2xl lg:mt-10 2xl:mt-20">
         Skills
       </h3>
       <h3 className="w-3/4 uppercase tracking-[3px] text-xs text-gray-500 md:text-sm md:w-auto md:-mb-20">

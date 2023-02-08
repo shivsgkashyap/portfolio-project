@@ -19,7 +19,7 @@ const About = ({ pageInfo }: Props) => {
       transition={{ duration: 1.5 }}
       className="flex flex-col relative h-screen text-center max-w-7xl px-10 mx-auto items-center md:text-left justify-center md:gap-10 2xl:gap-20"
     >
-      <h3 className="uppercase tracking-[20px] text-gray-500 text-2xl lg:-mb-5">
+      <h3 className="pl-5 uppercase tracking-[20px] text-gray-500 text-2xl lg:-mb-5">
         About
       </h3>
 

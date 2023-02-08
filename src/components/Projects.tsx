@@ -15,7 +15,7 @@ type Props = {
 const Projects = ({ projects }: Props) => {
   return (
     <div className="h-screen relative flex overflow-hidden flex-col text-left max-w-full justify-center mx-auto items-center z-0">
-      <h3 className="mt-20 -mb-24 md:mb-0 uppercase tracking-[20px] text-gray-500 text-2xl lg:mt-10 2xl:mt-20">
+      <h3 className="pl-5 mt-20 -mb-24 md:mb-0 uppercase tracking-[20px] text-gray-500 text-2xl lg:mt-10 2xl:mt-20">
         Projects
       </h3>
 
