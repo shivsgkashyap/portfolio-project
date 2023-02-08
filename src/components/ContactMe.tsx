@@ -24,15 +24,15 @@ const ContactMe = (props: Props) => {
         Contact
       </h3>
 
-      <div className="mt-16 flex flex-col space-y-10 md:mt-10 2xl:mt-0">
-        <h4 className="md:text-4xl text-xl font-semibold text-center">
+      <div className="mt-16 flex flex-col space-y-5 md:space-y-10 md:mt-10 2xl:mt-0">
+        <h4 className="hidden md:block md:text-4xl text-xl font-semibold text-center">
           I have got just what you need.{" "}
           <span className="underline decoration-[#F7AB0A]/50">
             {"Let's talk."}
           </span>
         </h4>
 
-        <div className="space-y-10">
+        <div className="space-y-5 md:space-y-10">
           <div className="flex items-center space-x-5 justify-center">
             <PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
             <p className="text-xl md:text-2xl">+44 7772 451177</p>

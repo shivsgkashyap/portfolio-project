@@ -37,11 +37,11 @@ const About = ({ pageInfo }: Props) => {
         }}
         viewport={{ once: true }}
         src={urlFor(pageInfo?.profilePic).url()}
-        className="my-6 flex-shrink-0 w-56 h-56 rounded-full object-cover md:my-2 md:rounded-lg md:w-[412px] md:h-[234px] 2xl:w-[825px] 2xl:h-[469px] lg:my-0"
+        className="my-2 flex-shrink-0 w-36 h-36 rounded-full object-cover md:rounded-lg md:w-[412px] md:h-[234px] 2xl:w-[825px] 2xl:h-[469px] lg:my-0"
       />
 
       <div className="space-y-2 2xl:space-y-10 px-0 md:px-10">
-        <h4 className="text-4xl font-semibold">
+        <h4 className="text-xl md:text-4xl font-semibold">
           Here is a{" "}
           <span className="underline decoration-[#F7AB0A]/50">little</span>{" "}
           background:
